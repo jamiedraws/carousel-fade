@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Fade</title>
-</head>
-<body>
-    <h1>Carousel Fader</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carousel Fade</title>
+        <link rel="stylesheet" href="./css/app.css" />
+        <script defer src="./js/app.es5.js"></script>
+    </head>
+    <body>
+        <div class="slide slide--fade">
+            <div class="slide__into" tabindex="0" id="carousel">
+                <picture class="slide__item">
+                    <source srcset="./images/slide-1.webp" type="image/webp" />
+                    <img
+                        src="./images/slide-1.jpg"
+                        alt=""
+                        width="1100"
+                        height="619"
+                    />
+                </picture>
+                <picture class="slide__item">
+                    <source srcset="./images/slide-2.webp" type="image/webp" />
+                    <img
+                        src="./images/slide-2.jpg"
+                        alt=""
+                        width="1100"
+                        height="619"
+                        loading="lazy"
+                    />
+                </picture>
+                <picture class="slide__item">
+                    <source srcset="./images/slide-3.webp" type="image/webp" />
+                    <img
+                        src="./images/slide-3.jpg"
+                        alt=""
+                        width="1100"
+                        height="619"
+                        loading="lazy"
+                    />
+                </picture>
+                <picture class="slide__item">
+                    <source srcset="./images/slide-4.webp" type="image/webp" />
+                    <img
+                        src="./images/slide-4.jpg"
+                        alt=""
+                        width="1100"
+                        height="619"
+                        loading="lazy"
+                    />
+                </picture>
+            </div>
+            <div class="slide__nav">
+                <button aria-label="Previous" class="slide__prev" type="button">
+                    <svg class="icon">
+                        <use href="#icon-chevron"></use>
+                    </svg>
+                </button>
+                <button aria-label="Next" class="slide__next" type="button">
+                    <svg class="icon">
+                        <use href="#icon-chevron"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <svg hidden>
+            <symbol id="icon-chevron" x="0px" y="0px" viewBox="0 0 5.3 8.2">
+                <path d="M0.8,4.2 M0.8,4.2L4,1 M4,7.4L0.8,4.2" />
+            </symbol>
+        </svg>
+    </body>
 </html>
